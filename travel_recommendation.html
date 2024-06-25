@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
   <title>Travel Ethiopia</title>
-  <style>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .topnav {
-  position: relative;
   overflow: hidden;
   background-color: #333;
 }
@@ -29,51 +32,34 @@
   color: white;
 }
 
-.topnav-centered a {
-  float: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .topnav-right {
   float: right;
-}
 
-/* Responsive navigation menu (for mobile devices) */
-@media screen and (max-width: 600px) {
-  .topnav a, .topnav-right {
-    float: none;
-    display: block;
-  }
-  
-  .topnav-centered a {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-  }
 }
-
-  </style>
-  <body>
-  <div class="topnav">
-  <a href="#home">Home</a>
-         <a href="#about">About us</a>
-    <!-- Centered link -->
-    <div class="topnav-centered">
-         
-         <a href="#contact">Contact Us</a>
-    </div>
-      <!-- Right-aligned links -->
-    <div class="topnav-right">
-         <input type="text" placeholder="Search..">
-         <button>Submit</button>
-    </div>
+input[type=text] {
   
-  </div>
+  padding: 12px 20px;
   
-  </body>
+}
+button[type=submit] {
+  
+  padding: 12px 20px;
+  
+}
+</style>
 </head>
+<body>
+
+<div class="topnav">
+ 
+  <div class="topnav-right">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">About Us</a>
+  <a href="#contact">Contact Us</a>
+ <input type="text" placeholder="Search..">
+         <button type="submit">Submit</button>
+  </div>
+</div>
+
+</body>
 </html>
