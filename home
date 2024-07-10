@@ -7,7 +7,7 @@ body {margin:0}
 
 .icon-bar {
   width: 90px;
-  background-color: #555;
+  
 }
 
 .icon-bar a {
@@ -23,11 +23,9 @@ body {margin:0}
   background-color: #000;
 }
 
-.active {
-  background-color: #04AA6D;
-}
+
 </style>
-<body background="https://www.akc.org/wp-content/uploads/2009/01/Cavalier-King-Charles-Spaniel-head-portrait-outdoors.jpg" >
+<body background="https://i.redd.it/dont-put-off-that-trip-ethiopia-2019-v0-jqbx4jq2t5p81.jpg?width=1080&format=pjpg&auto=webp&s=ea14db93be459d648b63dd3031b23f43d6c0a143" >
   <p class="w3-opacity"><i>We love music</i></p>
   <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
@@ -40,4 +38,4 @@ body {margin:0}
 </div>
   
 </body>
-</html> 
+</html>
