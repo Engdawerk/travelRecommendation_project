@@ -1,5 +1,5 @@
  function keyword() {
-            fetch("./sample.json")
+            fetch("./travel_recommendation_api.json")
                 .then((res) => {
                     if (!res.ok) {
                         throw new Error
