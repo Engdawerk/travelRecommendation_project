@@ -1,28 +1,43 @@
-const keywords = {
+  const keywords = {
   beach: ["beach", "beaches"],
   temple: ["temple", "temples"],
   country: ["country", "countries"]
 };
 
-// Function to search and display results
-function search() {
+  async function fetchData() {
+  const response = await fetch('travel_recommendation_api.json');
+  const data = await response.json();
+  return data.recommendations;
+}
+
+async function search() {
   const searchInput = document.getElementById('search-input').value.toLowerCase();
   const resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = ''; // Clear previous results
-  
-  // Check for matching keywords
+
+  const recommendations = await fetchData();
   let found = false;
 
   for (const [key, variations] of Object.entries(keywords)) {
     if (variations.includes(searchInput)) {
-      resultsDiv.innerHTML += `<div class="result">${key.charAt(0).toUpperCase() + key.slice(1)} found!</div>`;
-      found = true;
-    }
-  }
+           found = true;
+      const keyword = Object.keys(recommendations).find(key => key === searchInput);
 
-  if (!found) {
+  if (keyword) {
+    recommendations[keyword].forEach(place => {
+      resultsDiv.innerHTML += `
+        <div class="result">
+          <h3>${place.name}</h3>
+          <img src="${place.imageUrl}" alt="${place.name}" />
+          <p>${place.description}</p>
+        </div>
+      `;
+    });
+  } else {
     resultsDiv.innerHTML = '<div class="result">No results found.</div>';
   }
+    }
+  } 
 }
 
 // Add event listener to the search button
