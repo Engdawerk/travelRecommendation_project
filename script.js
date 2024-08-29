@@ -112,3 +112,67 @@ document.getElementById('filterButton').addEventListener('click', () => {
     document.getElementById('userInput').value = ''; // Clear input field
     document.getElementById('output').innerHTML = ''; // Clear output area
 });
+function loadHome() {
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = ''; // Clear previous content
+
+    // Home page content with icons and styles
+    outputDiv.innerHTML = `
+        <h2>Welcome to Travel Ethiopia</h2>
+        <p class="w3-opacity"><i>We love music</i></p>
+        <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        
+        <div class="icon-bar">
+            <a class="active" href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook-f"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+        </div>
+    `;
+    
+    // Add styles for the icon bar
+    const style = document.createElement('style');
+    style.textContent = `
+        .icon-bar {
+            width: 90px;
+        }
+        .icon-bar a {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 36px;
+        }
+        .icon-bar a:hover {
+            background-color: #000;
+        }
+    `;
+    
+    document.head.appendChild(style);
+}
+
+function loadAbout() {
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = ''; // Clear previous content
+
+    // About page content
+    outputDiv.innerHTML = `
+        <h2>About Us</h2>
+        <p>We are dedicated to providing the best travel experiences in Ethiopia.</p>
+        <p>Join us as we explore the rich history, culture, and traditions of this beautiful country.</p>
+    `;
+}
+
+function loadContact() {
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = ''; // Clear previous content
+
+    // Contact page content
+    outputDiv.innerHTML = `
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out!</p>
+        <p>Email: info@travelethiopia.com</p>
+        <p>Phone: +251 123 456 789</p>
+    `;
+}
