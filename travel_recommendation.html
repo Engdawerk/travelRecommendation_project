@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Travel Ethiopia</title>
 <style>
 body {
@@ -55,9 +57,14 @@ button[type=reset] {
  <img src="https://www.w3schools.com/images/w3schools_green.jpg" id="logo" style="width:40px;height:40px;" />
 
   <div class="topnav-right">
-  <a class="active" href="./home.html">Home</a>
+ <!--
+    <a class="active" href="./home.html">Home</a>
   <a href="./about.html">About Us</a>
   <a href="./contact.html">Contact Us</a>
+  -->
+  <a class="active" href="javascript:void(0);" onclick="loadHome()">Home</a>
+  <a href="javascript:void(0);" onclick="loadAbout()">About Us</a>
+  <a href="javascript:void(0);" onclick="loadContact()">Contact Us</a>
   <input type="text" id="userInput" placeholder="Search..">
   <button type="submit" id="filterButton">Submit</button>
   <button type="reset" id="clearButton">Reset</button>
@@ -71,4 +78,3 @@ button[type=reset] {
 </script>
 </body>
 </html>
-
