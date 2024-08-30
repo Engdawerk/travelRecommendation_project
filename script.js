@@ -158,10 +158,163 @@ function loadAbout() {
 
     // About page content
     outputDiv.innerHTML = `
-        <h2>About Us</h2>
-        <p>We are dedicated to providing the best travel experiences in Ethiopia.</p>
-        <p>Join us as we explore the rich history, culture, and traditions of this beautiful country.</p>
+       <div class="about-section">
+  <h1>About Us Page</h1>
+  <p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+</div>
+
+
+<div class="row">
+<h2 style="text-align:center">Our Team</h2>
+<div class="column">
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-facebook-f"></i></a> 
+  <a href="#"><i class="fa fa-instagram"></i></a> 
+  <a href="#"><i class="fa fa-youtube-play"></i></a>
+ </div>
+</div>
+<div class="column">
+
+    <div class="card">
+     
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>jane@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  </div>
     `;
+     // Add styles for the icon bar
+     const style = document.createElement('style');
+     style.textContent = `
+    body {margin:0}
+
+.icon-bar {
+  width: 90px;
+  
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 25px;
+}
+
+.card {
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  
+  color: white;
+}
+
+.container {
+  padding: 5px 25px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+     `;
+     
+     document.head.appendChild(style);
 }
 
 function loadContact() {
@@ -170,9 +323,187 @@ function loadContact() {
 
     // Contact page content
     outputDiv.innerHTML = `
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach out!</p>
-        <p>Email: info@travelethiopia.com</p>
-        <p>Phone: +251 123 456 789</p>
+        <div class="free-section">
+  
+</div>
+
+
+<div class="row">
+
+<div class="column">
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-twitter"></i></a> 
+  <a href="#"><i class="fa fa-facebook-f"></i></a> 
+  <a href="#"><i class="fa fa-instagram"></i></a> 
+  <a href="#"><i class="fa fa-youtube-play"></i></a>
+ </div>
+</div>
+<div class="column">
+
+    <div class="card">
+     
+      <div class="container">
+        <h2>contact us</h2>
+              </div>
+    </div>
+  </div>
+
+ 
+  
+  <div class="column">
+    <div class="card">
+      
+      <div class="container2">
+        <form action="/action_page.php">
+          <label for="fname">Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your email..">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message.." style="height:200px">                 </textarea>
+          <input type="submit" value="Submit">
+         </form>
+      </div>
+    </div>
+  </div>
+  </div>
     `;
+    const style = document.createElement('style');
+    style.textContent = `
+      body {margin:0}
+
+.icon-bar {
+  width: 90px;
+  
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 35%;
+  margin-bottom: 16px;
+  padding: 0 25px;
+}
+
+.card {
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+.free-section {
+  padding: 50px;
+  text-align: center;
+  
+  color: white;
+}
+
+.container {
+  padding: 5px 20px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.container2 {
+  border-radius: 5px;
+  
+  padding: 5px 25px;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.contactus {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+    `;
+    
+    document.head.appendChild(style);
 }
